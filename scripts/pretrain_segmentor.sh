@@ -2,7 +2,7 @@ GPU_ID=0
 
 DATASET='s3dis'
 SPLIT=0
-DATA_PATH='./datasets/S3DIS/blocks_bs1_s1'
+DATA_PATH='./datasets/S3DIS/fold_0'
 SAVE_PATH='./log_s3dis/'
 
 NUM_POINTS=2048

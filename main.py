@@ -17,7 +17,7 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', type=str, default='s3dis', help='Dataset name: s3dis|scannet')
     parser.add_argument('--cvfold', type=int, default=0, help='Fold left-out for testing in leave-one-out setting '
                                                               'Options:{0,1}')
-    parser.add_argument('--data_path', type=str, default='./datasets/S3DIS/blocks_bs1_s1',
+    parser.add_argument('--data_path', type=str, default='./datasets/S3DIS/fold_0',
                                                     help='Directory to the source data')
     parser.add_argument('--pretrain_checkpoint_path', type=str, default=None,
                         help='Path to the checkpoint of pre model for resuming')
@@ -51,8 +51,8 @@ if __name__ == '__main__':
                         help='Number of episode per configuration during testing')
 
     # Point cloud processing
-    parser.add_argument('--pc_npts', type=int, default=2048, help='Number of input points for PointNet.')
-    parser.add_argument('--pc_attribs', default='xyzrgbXYZ',
+    parser.add_argument('--pc_npts', type=int, default=5000, help='Number of input points for PointNet.')
+    parser.add_argument('--pc_attribs', default='xyzrgb',
                         help='Point attributes fed to PointNets, if empty then all possible. '
                              'xyz = coordinates, rgb = color, XYZ = normalized xyz')
     parser.add_argument('--pc_augm', action='store_true', help='Training augmentation for points in each superpoint')

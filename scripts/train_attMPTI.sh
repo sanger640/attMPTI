@@ -2,7 +2,7 @@ GPU_ID=0
 
 DATASET='s3dis'
 SPLIT=0
-DATA_PATH='./datasets/S3DIS/blocks_bs1_s1'
+DATA_PATH='./datasets/S3DIS/fold_0'
 SAVE_PATH='./log_s3dis/'
 
 NUM_POINTS=2048
@@ -13,7 +13,7 @@ K=20
 BASE_WIDTHS='[128, 64]'
 OUTPUT_WIDTHS='[64]'
 
-PRETRAIN_CHECKPOINT='./log_s3dis/log_pretrain_s3dis_S0'
+PRETRAIN_CHECKPOINT='./log_s3dis/log_pretrain_fold_0'
 N_WAY=2
 K_SHOT=1
 N_QUESIES=1
